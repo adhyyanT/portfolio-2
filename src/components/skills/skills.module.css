@@ -1,0 +1,9 @@
+.tag {
+  font-size: 0.75rem;
+  background-color: red;
+}
+
+.tag1 {
+  background-color: rgba(59, 130, 246, 0.3);
+  /* color: var(--tag1) / 1; */
+}

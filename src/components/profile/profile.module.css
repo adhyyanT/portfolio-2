@@ -1,0 +1,7 @@
+.avatar {
+  border: 1px solid var(--border);
+}
+
+.roleFont {
+  color: var(--text-muted);
+}
