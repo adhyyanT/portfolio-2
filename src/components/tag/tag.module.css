@@ -1,0 +1,23 @@
+.tag {
+  font-size: 0.85rem;
+}
+
+.tag1 {
+  background-color: var(--tag1);
+  color: var(--tag1-font);
+}
+
+.tag2 {
+  background-color: var(--tag2);
+  color: var(--tag2-font);
+}
+
+.tag3 {
+  background-color: var(--tag3);
+  color: var(--tag3-font);
+}
+
+.tag4 {
+  background-color: var(--tag4);
+  color: var(--tag4-font);
+}

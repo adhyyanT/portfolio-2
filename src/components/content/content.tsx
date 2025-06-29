@@ -1,5 +1,6 @@
 import { About } from "../about/About";
-import { Skills } from "../skills/Skills";
+import { Experience } from "../experience/Experience";
+import { SkillsCard } from "../skills/SkillsCard";
 
 export const Content = () => {
   return (
@@ -8,7 +9,10 @@ export const Content = () => {
         <About />
       </div>
       <div>
-        <Skills />
+        <SkillsCard />
+      </div>
+      <div className="experience">
+        <Experience />
       </div>
     </div>
   );
