@@ -5,7 +5,8 @@
   --text: hsl(0 0% 95%);
   --text-muted: hsl(0 0% 70%);
   --border: hsl(0 0 30%);
-
+  --button: hsl(45, 93%, 47%);
+  --button-text: #524008;
   /* tags */
   --tag1: #1e3356;
   --tag1-font: hsl(217, 91%, 60%);
@@ -17,4 +18,10 @@
   --tag4-font: hsl(0, 84%, 60%);
   --tag5: #53420e;
   --tag5-font: hsl(45, 93%, 47%);
+
+  /* Loader */
+  /* --blue: hsl(237, 96%, 46%);
+  --blue-border: hsl(193, 80%, 51%); */
+  --blue: hsl(45, 93%, 47%);
+  --blue-border: hsl(45, 43%, 73%);
 }

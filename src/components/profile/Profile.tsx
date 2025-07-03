@@ -1,6 +1,10 @@
 import classNames from "classnames";
-import styles from "./profile.module.css";
+import { Code, File, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 import { Button } from "../ui/button/Button";
+import styles from "./profile.module.css";
+import { ButtonType } from "@/types";
+import { DATA } from "@/data";
 
 export const Profile = () => {
   return (
@@ -11,24 +15,50 @@ export const Profile = () => {
           styles.avatar
         )}
       >
-        photo
+        <Image
+          className="rounded-full"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQEnF_y5x8vJ_g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669831400527?e=1756944000&v=beta&t=PUziYhMojLf57VX_wtCfFEsXOWAC9KWu9pEckQFnX9Q"
+          width={150}
+          height={150}
+          alt="image"
+        />
       </div>
       <div className=" text-4xl font-bold mb-2">Adhyyan Tripathi</div>
       <div className={classNames(styles.roleFont, "text-xl mb-4")}>
-        Full-Stack Developer
+        {DATA.profile.title}
       </div>
       <div className={classNames("text-xl mb-4", styles.roleFont)}>
-        (icon) Mumbai, Maharashtra, India (flag)
+        {DATA.profile.location}
       </div>
       <div className={classNames("mb-4", styles.roleFont)}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil
-        soluta
+        {DATA.profile.subtitle}
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-16 w-full">
         <div>
-          <Button>Resume</Button>
+          <Button buttonType={ButtonType.ResumeDownload}>
+            <File /> Resume
+          </Button>
         </div>
-        <div className="ml-4">other social links</div>
+        <div className="flex gap-4">
+          <Button
+            buttonType={ButtonType.Link}
+            link="https://www.linkedin.com/in/adhyyan-tripathi/"
+          >
+            <Linkedin size={36} />
+          </Button>
+          <Button
+            buttonType={ButtonType.Link}
+            link="mailto:adhyyan.tripathi@outlook.com"
+          >
+            <Mail size={36} />
+          </Button>
+          <Button
+            link="https://leetcode.com/u/Droid232/"
+            buttonType={ButtonType.Link}
+          >
+            <Code size={36} />
+          </Button>
+        </div>
       </div>
     </div>
   );

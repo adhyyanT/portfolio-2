@@ -1,8 +1,13 @@
 export const DATA = {
-  about: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-        cupiditate doloremque laudantium nemo, sit doloribus earum omnis quos
-        molestiae laborum dignissimos totam, culpa architecto dicta, tempore
-        labore magni maiores dolore?`,
+  profile: {
+    subtitle:
+      "Software Engineer | React | Express | TypeScript | MySQL | Kafka | Microservices",
+    title: "Full-Stack Developer",
+    location: "📍 Mumbai, India 🇮🇳",
+  },
+  about: `Software engineer with expertise in React, TypeScript, Express, and building user-focused, scalable, data-driven applications. Worked
+across finance and advertising domains to help businesses bring products to market faster and more efficiently. Proficient in working
+across the full stack and aligning technical solutions with business goals.`,
   skillSections: [
     {
       title: "Programming Languages",
@@ -32,10 +37,10 @@ export const DATA = {
   experiences: [
     {
       title: "Software Engineer",
-      location: "Mumbai, Maharashtra, India",
+      location: "V2Solutions, Mumbai",
       startDate: "10/15/2023",
       endDate: undefined,
-      logo: "",
+      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHDyjgwxHQKzQ/company-logo_200_200/company-logo_200_200/0/1734699577722/v2solutions_logo?e=1756944000&v=beta&t=sXXWPrZNF1VJTqWdC4AvnFa7w5ZfGMIkXeeiwN0YRN8",
       bullets: [
         "Migrated a legacy mortgage underwriting desktop app into a responsive web application using React and Redux, increasing employee efficiency by 66%.",
         "Contributed to an internal UI component library built with React, TypeScript, and Storybook.",
@@ -54,14 +59,14 @@ export const DATA = {
         "Kafka",
         "MongoDB",
       ],
-      tagIndex: 1,
+      tagIndex: 4,
     },
     {
       title: "Analyst",
-      location: "Bengaluru, Karnataka",
+      location: "Capgemini, Bengaluru",
       startDate: "10/19/2021",
       endDate: "11/29/2022",
-      logo: "",
+      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQH-ZV832H4sdA/company-logo_200_200/company-logo_200_200/0/1705572256355/capgemini_logo?e=1756944000&v=beta&t=PLgaMs3WKKhGsw59gjMOl5CTU5sDwZOq1Umadbqdjk0",
       bullets: [
         "Developed applications from the ground up using React.js to track lead generation and manage an admin portal, integrating services like Amazon S3.",
         "Engineered a highly adaptable landing page that allows modifications through an intuitive user interface in the admin portal using React.js and Material UI.",
@@ -78,7 +83,16 @@ export const DATA = {
         "Agile",
         "Material UI",
       ],
-      tagIndex: 2,
+      tagIndex: 4,
+    },
+  ],
+  educations: [
+    {
+      title: "B.Tech in Computer Science Engineering",
+      college: "Sikkim Manipal Institute of Technology",
+      startDate: "07/23/2017",
+      endDate: "10/01/2021",
+      logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFxPWXKWTbLmw/company-logo_200_200/company-logo_200_200/0/1631344954635?e=1756944000&v=beta&t=qqGmdK69ElsFxGUEeFVTTrL8pAN0orDvYeN7_pK_qMg",
     },
   ],
 };

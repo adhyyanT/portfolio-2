@@ -21,3 +21,8 @@
   background-color: var(--tag4);
   color: var(--tag4-font);
 }
+
+.tag5 {
+  background-color: var(--tag5);
+  color: var(--tag5-font);
+}

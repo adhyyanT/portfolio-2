@@ -1,4 +1,5 @@
 import { About } from "../about/About";
+import { Education } from "../education/Education";
 import { Experience } from "../experience/Experience";
 import { SkillsCard } from "../skills/SkillsCard";
 
@@ -13,6 +14,9 @@ export const Content = () => {
       </div>
       <div className="experience">
         <Experience />
+      </div>
+      <div>
+        <Education />
       </div>
     </div>
   );

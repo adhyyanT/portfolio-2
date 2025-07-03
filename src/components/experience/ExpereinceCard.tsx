@@ -2,6 +2,7 @@ import classNames from "classnames";
 import styles from "./experience.module.css";
 import { Tag } from "../tag/Tag";
 import React from "react";
+import Image from "next/image";
 
 export type ExperienceCardProps = {};
 
@@ -28,9 +29,9 @@ const ExperienceCard = ({
 
   return (
     <div className="ml-4 mt-8">
-      <div className="flex items-center gap-4 mb-2">{header}</div>
+      <div className="flex items-start gap-4 mb-2">{header}</div>
       <ul className="muted-font">{content}</ul>
-      <div className="mt-4">{skills}</div>
+      <div className="mt-4 flex flex-wrap">{skills}</div>
     </div>
   );
 };
@@ -58,11 +59,17 @@ const Header = ({
           styles.companyLogo
         )}
       >
-        {logo}
+        <Image
+          src={logo}
+          width={150}
+          height={150}
+          alt="v2Sol"
+          className="rounded-full"
+        />
       </div>
       <div>
         <div className="text-2xl font-semibold">{children}</div>
-        <div className="text-xl muted-font">{location}</div>
+        <div className="text-l muted-font">{location}</div>
         <div className="muted-font">
           {startDate} - {endDate ?? "Present"} (1 year and 11 months)
           {/* TODO: Get the count of year and month from start and end dates */}

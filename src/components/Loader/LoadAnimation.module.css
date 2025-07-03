@@ -1,0 +1,36 @@
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background-color: var(--blue-border);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* animation: slideUp 3s cubic-bezier(0.78, 0, 0.64, 0.62) 0.5s forwards; */
+}
+.heading {
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: min(30vw, 18rem);
+	text-align: center;
+}
+@keyframes slideUp {
+	75% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+.innerBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--blue);
+	width: 100%;
+	height: 100%;
+}

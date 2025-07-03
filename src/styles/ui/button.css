@@ -1,10 +1,19 @@
-button {
+.buttonPrimary {
   border: 1px solid var(--border);
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  /* border-radius: 4px; */
   font-size: 1.25rem;
+  background-color: var(--button);
+  color: var(--button-text);
 }
 
-button:hover {
+.buttonPrimary:hover {
   cursor: pointer;
+  scale: 1.05;
+  transition: scale 0.2s;
+}
+
+.buttonPrimary:active {
+  scale: 0.95;
+  transition: scale 0.2s;
 }
