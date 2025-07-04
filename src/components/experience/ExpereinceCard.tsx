@@ -1,9 +1,8 @@
 import classNames from "classnames";
-import styles from "./experience.module.css";
-import { Tag } from "../tag/Tag";
-import React from "react";
 import Image from "next/image";
-import moment from "moment";
+import React from "react";
+import { Tag } from "../tag/Tag";
+import styles from "./experience.module.css";
 
 export type ExperienceCardProps = {};
 
@@ -50,20 +49,30 @@ const Header = ({
   logo,
   children,
 }: HeaderProps) => {
-  function getDateDifference(
-    dateA: string | Date,
-    dateB?: string | Date
-  ): string {
-    if (!dateB) dateB = Date();
-    const start = moment(dateA);
-    const end = moment(dateB);
-    const totalMonths = end.diff(start, "months");
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
+  function getDateDifference(from: string | Date, to?: string | Date): string {
+    if (!to) to = Date();
+    if (typeof from === "string") {
+      from = new Date(from);
+    }
+    if (typeof to === "string") {
+      to = new Date(to);
+    }
+    let fromYear = from.getFullYear();
+    let fromMonth = from.getMonth();
+    let toYear = to.getFullYear();
+    let toMonth = to.getMonth();
+
+    let yearDiff = toYear - fromYear;
+    let monthDiff = toMonth - fromMonth;
+
+    if (monthDiff < 0) {
+      yearDiff--;
+      monthDiff += 12;
+    }
 
     let result = "";
-    if (years) result += `${years} year${years > 1 ? "s" : ""} `;
-    if (months) result += `${months} month${months > 1 ? "s" : ""}`;
+    if (yearDiff) result += `${yearDiff} year${yearDiff > 1 ? "s" : ""} `;
+    if (monthDiff) result += `${monthDiff} month${monthDiff > 1 ? "s" : ""}`;
 
     return result.trim();
   }
