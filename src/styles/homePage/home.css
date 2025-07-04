@@ -30,6 +30,7 @@
     width: 100%;
   }
   .content {
+    border: unset;
     border-top: 1px solid var(--border);
     padding: 3rem 1rem 3rem 1rem;
   }
