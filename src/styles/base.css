@@ -2,6 +2,7 @@ html,
 body {
   background-color: var(--bg-dark);
   color: var(--text);
+  font-size: 1.05rem;
 }
 
 .muted-font {

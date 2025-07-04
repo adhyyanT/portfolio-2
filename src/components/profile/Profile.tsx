@@ -17,7 +17,7 @@ export const Profile = () => {
       >
         <Image
           className="rounded-full"
-          src="https://media.licdn.com/dms/image/v2/D4D03AQEnF_y5x8vJ_g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669831400527?e=1756944000&v=beta&t=PUziYhMojLf57VX_wtCfFEsXOWAC9KWu9pEckQFnX9Q"
+          src="https://4ep09v5dco.ufs.sh/f/ObbFGHI3vFYcRyBUEmjnbTu8tWKqeQxBhfr6LsP5EVmiw7YR"
           width={150}
           height={150}
           alt="image"

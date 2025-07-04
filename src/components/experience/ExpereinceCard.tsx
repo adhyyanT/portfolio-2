@@ -3,10 +3,9 @@ import styles from "./experience.module.css";
 import { Tag } from "../tag/Tag";
 import React from "react";
 import Image from "next/image";
+import moment from "moment";
 
 export type ExperienceCardProps = {};
-
-const skills = ["Javascript", "React"];
 
 const ExperienceCard = ({
   children,
@@ -51,6 +50,23 @@ const Header = ({
   logo,
   children,
 }: HeaderProps) => {
+  function getDateDifference(
+    dateA: string | Date,
+    dateB?: string | Date
+  ): string {
+    if (!dateB) dateB = Date();
+    const start = moment(dateA);
+    const end = moment(dateB);
+    const totalMonths = end.diff(start, "months");
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    let result = "";
+    if (years) result += `${years} year${years > 1 ? "s" : ""} `;
+    if (months) result += `${months} month${months > 1 ? "s" : ""}`;
+
+    return result.trim();
+  }
   return (
     <>
       <div
@@ -71,8 +87,8 @@ const Header = ({
         <div className="text-2xl font-semibold">{children}</div>
         <div className="text-l muted-font">{location}</div>
         <div className="muted-font">
-          {startDate} - {endDate ?? "Present"} (1 year and 11 months)
-          {/* TODO: Get the count of year and month from start and end dates */}
+          {startDate} - {endDate ?? "Present"}{" "}
+          {getDateDifference(startDate, endDate)}
         </div>
       </div>
     </>

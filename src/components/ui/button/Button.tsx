@@ -22,7 +22,6 @@ export const Button = ({
     link.click();
     document.body.removeChild(link);
   };
-  console.log(buttonType);
   if (buttonType === ButtonType.ResumeDownload)
     return (
       <button
