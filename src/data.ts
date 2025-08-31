@@ -11,11 +11,11 @@ across the full stack and aligning technical solutions with business goals.`,
   skillSections: [
     {
       title: "Programming Languages",
-      skills: ["TypeScript", "Javascript", "Java"],
+      skills: ["TypeScript", "Javascript", "Python", "Java"],
     },
     {
       title: "Frameworks",
-      skills: ["ReactJS", "ExpressJS", "VueJS", "StoryBook", "Jest"],
+      skills: ["ReactJS", "Flask", "Angular", "StoryBook"],
     },
     {
       title: "Technologies",
